@@ -1,2 +1,3 @@
 # errors
-Go Errors Wrapping - It's like pkg/errors but uses Go's new error wrapping since 1.13
+
+Go errors wrapping like `pkg/errors` but using Go's new error wrapping since 1.13.
