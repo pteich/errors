@@ -12,11 +12,17 @@ func New(msg string) error {
 
 // Wrap returns an error that wraps an existing error with a new one for a given string.
 func Wrap(err error, msg string) error {
+	if err == nil {
+		return nil
+	}
 	return fmt.Errorf("%s: %w", msg, err)
 }
 
 // Wrapf returns an error that wraps an existing error with a new one for a given format and arguments.
 func Wrapf(err error, format string, args ...interface{}) error {
+	if err == nil {
+		return nil
+	}
 	args = append(args, err)
 	return fmt.Errorf(format+": %w", args...)
 }
